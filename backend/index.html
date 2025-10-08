@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>BE SMKBI</title>
+</head>
+<style>
+    body {
+        font-family: Figtree;
+    }
+
+    #foto_walas {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 50%;
+    }
+</style>
+<body>
+    <img id="foto_walas" loading="lazy">
+    <h1 id="nama-kelas"></h1>
+    <h2 id="jurusan-panjang"></h2>
+    <h2 id="lantai-kelas"></h2>
+    <h2 id="wali-kelas"></h2>
+<script>
+const kelas = [
+    {
+        kode_kelas: '10rpl',
+        nama_kelas: 'X RPL',
+        jurusan_panjang: 'Rekayasa Perangkat Lunak',
+        lantai_kelas: 2,
+        nama_wali_kelas: 'Deni Ramdani, S.Pd.',
+        koordinat_kelas: '-6.283824420141462, 106.79447673620126',
+        foto_profil: 'deni-ramdani.JPG'
+    },
+    {
+        kode_kelas: '10tkj',
+        jurusan_panjang: 'Teknik Komputer dan Jaringan',
+        nama_kelas: 'X TKJ',
+        lantai_kelas: 2,
+        nama_wali_kelas: 'Mochammad Erwinsyah',
+        koordinat_kelas: '-6.28382308709447, 106.7943915760718',
+        foto_profil: 'mochammad-erwinsyah.JPG'
+    },
+    {
+        kode_kelas: '10dkv1',
+        nama_kelas: 'X DKV 1',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 1,
+        nama_wali_kelas: 'Stefans Khrisna Bayu, S.I.Kom.',
+        koordinat_kelas: '-6.283827010173166, 106.79446705433313',
+        foto_profil: 'stefans-khrisna-bayu.JPG'
+    },
+    {
+        kode_kelas: '10dkv2',
+        nama_kelas: 'X DKV 2',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 1,
+        nama_wali_kelas: 'Anisah Meidiana',
+        koordinat_kelas: '-6.283852338066239, 106.79457702490349',
+        foto_profil: 'anisah-meidiana.JPG'
+    },
+    {
+        kode_kelas: '11rpl',
+        nama_kelas: 'XI RPL',
+        jurusan_panjang: 'Rekayasa Perangkat Lunak',
+        lantai_kelas: 4,
+        nama_wali_kelas: 'Siswanto, A.Md.',
+        koordinat_kelas: '-6.283852338066239, 106.79457702490349',
+        foto_profil: 'siswanto.JPG'
+    },
+    {
+        kode_kelas: '11tkj',
+        nama_kelas: 'XI TKJ',
+        jurusan_panjang: 'Teknik Komputer dan Jaringan',
+        lantai_kelas: 2,
+        nama_wali_kelas: 'Jihan Fadhilah, S.Kom.',
+        koordinat_kelas: '-6.283875666387306, 106.79461524638101',
+        foto_profil: 'jihan-fadhillah.jpg'
+    },
+    {
+        kode_kelas: '11dkv1',
+        nama_kelas: 'XI DKV 1',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 4,
+        nama_wali_kelas: 'Wahdi Mulyawan, S.Pd.',
+        koordinat_kelas: '-6.28393765306235, 106.79466687890044',
+        foto_profil: 'wahdi-mulyawan.jpg'
+    },
+    {
+        kode_kelas: '11dkv2',
+        nama_kelas: 'XI DKV 2',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 4,
+        nama_wali_kelas: 'Sarah Nur Amalia, S.Pd.',
+        koordinat_kelas: '-6.284006971485903, 106.79467358442245',
+        foto_profil: 'sarah-nur-amalia.jpg'
+    }
+]
+
+const queryWindow = window.location.search;
+const queryParams = new URLSearchParams(queryWindow);
+
+const nama_kelas = queryParams.get('kode_kelas');
+const cari = kelas.find(k => k.kode_kelas === nama_kelas);
+
+if (cari) {
+    console.log(cari)
+} else {
+    alert('Terdapat kesalahan, tolong periksa kode kelas kembali, ya!')
+}
+
+const namaKelas = document.getElementById('nama-kelas');
+const jurusan = document.getElementById('jurusan-panjang');
+const waliKelas = document.getElementById('wali-kelas');
+const lantaiKelas = document.getElementById('lantai-kelas');
+const foto_walas = document.getElementById('foto_walas');
+
+foto_walas.src = `../img/walas/${cari.foto_profil}`;
+namaKelas.innerText = cari.nama_kelas;
+jurusan.innerText = cari.jurusan_panjang;
+waliKelas.innerText = cari.nama_wali_kelas;
+lantaiKelas.innerHTML = "Lantai " + cari.lantai_kelas;
+</script> 
+</body>
+</html>

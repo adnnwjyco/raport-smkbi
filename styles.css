@@ -1,0 +1,219 @@
+body {
+    overflow-x: hidden;
+    background-color: rgb(40, 57, 88);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Figtree, sans-serif;
+}
+
+html {
+    font-size: 16.5px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height:800px;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: linear-gradient(-45deg, rgba(15, 24, 39), rgb(40, 55, 86));
+	background-size: 400% 600%;
+	animation: gradient 2.6s ease infinite;
+    animation: muter 0.4ms ease infinite;
+    
+}
+
+@keyframes muter {
+    0% {
+        transform:matrix3d(360deg);
+    } 100% {
+        transform:matrix3d(-360deg);
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.kami {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 60%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.yang {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+#kata_undangan {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    line-height: 110px;
+    font-size: 5rem;
+    color: rgba(246, 228, 170);
+    text-align: center;
+}
+
+.wrap-logo-smk {
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    max-height: 150px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-logo-smk img {
+
+    width: 340px;
+}
+
+#kata_pembukaan {
+    position: relative;
+    top: -18rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#hari {
+    position: relative;
+    left: -12rem;
+    top: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+}
+
+#hr_tanggal {
+    position: relative;
+    left: -6rem;
+    height: 7rem;
+    width: 0.1rem;
+    border: 0.1rem solid white;
+    outline: none;
+    margin: auto;
+}
+
+#tanggal {
+    position: relative;
+    left: 0rem;
+    top: -8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+}
+
+#hr_waktu {
+    position: relative;
+    top: -15.7rem;
+    left: 6rem;
+    height: 7rem;
+    width: 0.1rem;
+    border: 0.1rem solid white;
+    outline: none;
+    margin: auto;
+}
+
+#waktu {
+    position: relative;
+    left: 12rem;
+    top: -22rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+}
+
+#hari_tanggal_waktu {
+    position: relative;
+    top: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+}
+
+#lokasi {
+    position: relative;
+    top: -12rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+}
+#donasi {
+    font-size: 25px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: aliceblue;
+    width: 70%;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    
+}
+#txt_donasi {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+#btn_donasi {
+    height: 60px;
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(61, 236, 140);
+    font-size: 23px;
+}
+
+#button_menu {
+    position: relative;
+    left: 0rem;
+    top: -10rem;
+    width: 40rem;
+    height: 6rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin: auto;
+}
