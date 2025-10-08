@@ -6,6 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Undangan Ambil Raport</title>
     <style>
+        :root {
+            --prim-bg-color: #fbfdeb;
+        }
+
         * {
             font-family: Figtree;
             margin: 0;
@@ -26,7 +30,7 @@
             margin: auto;
             width: 600px;
             height: 100%;
-            background-color: #fff;
+            background-color: var(--prim-bg-color);
         }
 
         h2 {
@@ -45,7 +49,7 @@
             width: 100%;
             height: 20vh;
             background-size: cover;
-            background-image: linear-gradient(180deg, transparent, #fff), url('./img/dummy.JPG');
+            background-image: linear-gradient(180deg, transparent, var(--prim-bg-color)), url('./img/dummy.JPG');
         }
 
         .logo-smk {
@@ -59,23 +63,30 @@
 
         .main-undangan {
             width: 100%;
-            display: block;
+            display: relative;
+            top: 50px;
             margin: auto;
         }
 
         .main-undangan h1 {
-            margin-top: 20px;
+            margin-top: 10px;
             text-align: center;
-            line-height: 50px;
+            line-height: 40px;
+            color: #8FA31E;
         }
 
         .main-undangan h2 {
             line-height: 30px;
             text-align: center;
             font-size: 1.2rem;
+            color: #556B2F;
         }
 
-        .perintah {
+        .perintah2 {
+            margin-top: 10px;
+        }
+
+        .perintah, .perintah2 {
             font-weight: 500;
         }
 
@@ -85,7 +96,7 @@
 
         @keyframes anims-def {
             0% {
-                transform: translateY(-10px) scale(0.5);
+                transform: translateY(-10px) scale(0.8);
                 opacity: 0%;
             }
             100% {
@@ -117,7 +128,8 @@
         </section>
         <section class="main-undangan">
             <h2 class="anim">Kepada Yth. Bapak/Ibu Wali Murid XI RPL <br> <span class="perintah">Anda diminta untuk menghadiri acara:</span></h2>
-            <!-- <h1>Pengambilan Hasil Rapot Peserta Didik</h1> -->
+            <h1 class="anim">Pengambilan Raport Peserta Didik</h1>
+            <h2 class="anim perintah2">Yang akan dilaksanakan pada:</span></h2>
         </section>
     </main>
 </body>
