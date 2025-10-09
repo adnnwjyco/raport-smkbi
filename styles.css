@@ -1,23 +1,14 @@
 #menu_wrap {
-    width: 37.5rem;
-    background-color: #556B2F;
-    position: sticky;
-    display: block;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+    margin: auto;
+    position: relative;
+    width: 33rem;
+    height: 3rem;
     bottom: 0;
-    z-index: 1;
-    height: 50px;
-    border-radius: 10px 10px 0 0;
+    background-color: white;
+    border: 1px solid #556b2f75;
+    border-radius: 20px 20px 0 0;
+    display: block;
 } 
-
-#menu_parent {
-    width: 37.5rem;
-    height: 200rem;
-    background-color: black;
-    
-}
 
 #tombol_undangan {
     position: relative;
