@@ -1,7 +1,7 @@
 #menu_wrap {
     width: 37.5rem;
     background-color: #556B2F;
-    position: fixed;
+    position: sticky;
     display: block;
     margin: 0 auto;
     left: 0;
@@ -12,6 +12,12 @@
     border-radius: 10px 10px 0 0;
 } 
 
+#menu_parent {
+    width: 37.5rem;
+    height: 200rem;
+    background-color: black;
+    
+}
 
 #tombol_undangan {
     position: relative;
