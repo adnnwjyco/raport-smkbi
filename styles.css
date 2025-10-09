@@ -1,219 +1,32 @@
-body {
-    overflow-x: hidden;
-    background-color: rgb(40, 57, 88);
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Figtree, sans-serif;
-}
-
-html {
-    font-size: 16.5px;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height:800px;
-    height: 100%;
-    width: 100%;
-    color: #fff;
-    background: linear-gradient(-45deg, rgba(15, 24, 39), rgb(40, 55, 86));
-	background-size: 400% 600%;
-	animation: gradient 2.6s ease infinite;
-    animation: muter 0.4ms ease infinite;
-    
-}
-
-@keyframes muter {
-    0% {
-        transform:matrix3d(360deg);
-    } 100% {
-        transform:matrix3d(-360deg);
-    }
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-.kami {
-    font-size: 2rem;
-    text-align: center;
-    max-width: 60%;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    line-height: 40px;
-}
-
-.yang {
-    font-size: 2rem;
-    text-align: center;
-    max-width: 60%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    line-height: 40px;
-}
-
-#kata_undangan {
+#menu_wrap {
+    width: 385px;
+    background-color: #556B2F;
+    position: fixed;
     display: block;
-    text-align: left;
-    font-weight: 600;
-    line-height: 110px;
-    font-size: 5rem;
-    color: rgba(246, 228, 170);
-    text-align: center;
-}
-
-.wrap-logo-smk {
-    background-color: #fff;
-    border-radius: 0 0 20px 20px;
-    max-height: 150px;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wrap-logo-smk img {
-
-    width: 340px;
-}
-
-#kata_pembukaan {
-    position: relative;
-    top: -18rem;
-    text-align: center;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: auto;
-    margin-top: 50px;
-}
-
-#hari {
-    position: relative;
-    left: -12rem;
-    top: 4rem;
-    text-align: center;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: auto;
-}
-
-#hr_tanggal {
-    position: relative;
-    left: -6rem;
-    height: 7rem;
-    width: 0.1rem;
-    border: 0.1rem solid white;
-    outline: none;
-    margin: auto;
-}
-
-#tanggal {
-    position: relative;
-    left: 0rem;
-    top: -8rem;
-    text-align: center;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: auto;
-}
-
-#hr_waktu {
-    position: relative;
-    top: -15.7rem;
-    left: 6rem;
-    height: 7rem;
-    width: 0.1rem;
-    border: 0.1rem solid white;
-    outline: none;
-    margin: auto;
-}
-
-#waktu {
-    position: relative;
-    left: 12rem;
-    top: -22rem;
-    text-align: center;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: auto;
-}
-
-#hari_tanggal_waktu {
-    position: relative;
-    top: 3rem;
-    text-align: center;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: auto;
-}
-
-#lokasi {
-    position: relative;
-    top: -12rem;
-    text-align: center;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: auto;
-}
-#donasi {
-    font-size: 25px;
-    display: none;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
-    margin-top: 200px;
-    background-color: aliceblue;
-    width: 70%;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    
-}
-#txt_donasi {
-    margin-top: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: center;
-}
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+} 
 
-#btn_donasi {
-    height: 60px;
-    width: 200px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    color: white;
-    background-color: rgb(61, 236, 140);
-    font-size: 23px;
-}
 
-#button_menu {
+#tombol_undangan {
     position: relative;
-    left: 0rem;
-    top: -10rem;
-    width: 40rem;
-    height: 6rem;
-    background-color: white;
-    border-radius: 1rem;
     margin: auto;
-}
+    display: inline-block;
+    left: 5rem;
+    top: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 16'%3E%3Cpath fill='%23000' d='M12.5 16h-10c-.83 0-1.5-.67-1.5-1.5v-13C1 .67 1.67 0 2.5 0h7.09c.4 0 .78.16 1.06.44l2.91 2.91c.28.28.44.66.44 1.06V14.5c0 .83-.67 1.5-1.5 1.5M2.5 1c-.28 0-.5.22-.5.5v13c0 .28.22.5.5.5h10c.28 0 .5-.22.5-.5V4.41a.47.47 0 0 0-.15-.35L9.94 1.15A.5.5 0 0 0 9.59 1z'/%3E%3Cpath fill='%23000' d='M13.38 5h-2.91C9.66 5 9 4.34 9 3.53V.62c0-.28.22-.5.5-.5s.5.22.5.5v2.91c0 .26.21.47.47.47h2.91c.28 0 .5.22.5.5s-.22.5-.5.5M10 13H5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h5c.28 0 .5.22.5.5s-.22.5-.5.5m0-3H5c-.28 0-.5-.22-.5-.5S4.72 9 5 9h5c.28 0 .5.22.5.5s-.22.5-.5.5M7 7H5c-.28 0-.5-.22-.5-.5S4.72 6 5 6h2c.28 0 .5.22.5.5S7.28 7 7 7'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  } 

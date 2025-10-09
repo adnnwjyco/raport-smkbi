@@ -1,5 +1,5 @@
-let btn_donasi = document.getElementById('btn_donasi')
+let hubungi = document.getElementById('hubungi')
 
-btn_donasi.addEventListener('click', function() {
+hubungi.addEventListener('click', function() {
     window.open('https://saweria.co/Purosaichi');
 }); 

@@ -34,7 +34,8 @@ const kelas = [
         lantai_kelas: 2,
         nama_wali_kelas: 'Deni Ramdani, S.Pd.',
         koordinat_kelas: '-6.283824420141462, 106.79447673620126',
-        foto_profil: 'deni-ramdani.JPG'
+        foto_profil: 'deni-ramdani.JPG',
+        nomor_telepon: ''
     },
     {
         kode_kelas: '10tkj',
@@ -43,7 +44,8 @@ const kelas = [
         lantai_kelas: 2,
         nama_wali_kelas: 'Mochammad Erwinsyah',
         koordinat_kelas: '-6.28382308709447, 106.7943915760718',
-        foto_profil: 'mochammad-erwinsyah.JPG'
+        foto_profil: 'mochammad-erwinsyah.JPG',
+        nomor_telepon: ''
     },
     {
         kode_kelas: '10dkv1',
@@ -52,7 +54,8 @@ const kelas = [
         lantai_kelas: 1,
         nama_wali_kelas: 'Stefans Khrisna Bayu, S.I.Kom.',
         koordinat_kelas: '-6.283827010173166, 106.79446705433313',
-        foto_profil: 'stefans-khrisna-bayu.JPG'
+        foto_profil: 'stefans-khrisna-bayu.JPG',
+        nomor_telepon: ''
     },
     {
         kode_kelas: '10dkv2',
@@ -61,7 +64,8 @@ const kelas = [
         lantai_kelas: 1,
         nama_wali_kelas: 'Anisah Meidiana',
         koordinat_kelas: '-6.283852338066239, 106.79457702490349',
-        foto_profil: 'anisah-meidiana.JPG'
+        foto_profil: 'anisah-meidiana.JPG',
+        nomor_telepon: ''
     },
     {
         kode_kelas: '11rpl',
@@ -70,7 +74,8 @@ const kelas = [
         lantai_kelas: 4,
         nama_wali_kelas: 'Siswanto, A.Md.',
         koordinat_kelas: '-6.283852338066239, 106.79457702490349',
-        foto_profil: 'siswanto.JPG'
+        foto_profil: 'siswanto.JPG',
+        nomor_telepon: ''
     },
     {
         kode_kelas: '11tkj',
@@ -79,7 +84,8 @@ const kelas = [
         lantai_kelas: 2,
         nama_wali_kelas: 'Jihan Fadhilah, S.Kom.',
         koordinat_kelas: '-6.283875666387306, 106.79461524638101',
-        foto_profil: 'jihan-fadhillah.jpg'
+        foto_profil: 'jihan-fadhillah.jpg',
+        nomor_telepon: ''
     },
     {
         kode_kelas: '11dkv1',
@@ -88,7 +94,8 @@ const kelas = [
         lantai_kelas: 4,
         nama_wali_kelas: 'Wahdi Mulyawan, S.Pd.',
         koordinat_kelas: '-6.28393765306235, 106.79466687890044',
-        foto_profil: 'wahdi-mulyawan.jpg'
+        foto_profil: 'wahdi-mulyawan.jpg',
+        nomor_telepon: ''
     },
     {
         kode_kelas: '11dkv2',
@@ -97,7 +104,8 @@ const kelas = [
         lantai_kelas: 4,
         nama_wali_kelas: 'Sarah Nur Amalia, S.Pd.',
         koordinat_kelas: '-6.284006971485903, 106.79467358442245',
-        foto_profil: 'sarah-nur-amalia.jpg'
+        foto_profil: 'sarah-nur-amalia.jpg',
+        nomor_telepon: ''
     }
 ]
 
@@ -119,11 +127,18 @@ const waliKelas = document.getElementById('wali-kelas');
 const lantaiKelas = document.getElementById('lantai-kelas');
 const foto_walas = document.getElementById('foto_walas');
 
+var hubungi = document.getElementById('hubungi');
+
 foto_walas.src = `../img/walas/${cari.foto_profil}`;
 namaKelas.innerText = cari.nama_kelas;
 jurusan.innerText = cari.jurusan_panjang;
 waliKelas.innerText = cari.nama_wali_kelas;
 lantaiKelas.innerHTML = "Lantai " + cari.lantai_kelas;
+
+hubungi.addEventListener('click', function() {
+    window.open(`https://wa.me/${cari.nomor_telepon}`)
+});
+
 </script> 
 </body>
 </html>
