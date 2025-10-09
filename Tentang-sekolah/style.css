@@ -30,9 +30,41 @@ header {
   color: #8FA31E;
   text-align: center;
   padding: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
+.info {
+        background-color: #bbd194;
+        margin-top: 20px;
+        border-radius: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+}
 
+.visi-misi {
+        background-color: #bbd194;
+        margin-top: 20px;
+        border-radius: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+.gambar {
+        background-color: #bbd194;
+        margin-top: 20px;
+        border-radius: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+.fasilitas {
+        background-color: #bbd194;
+        margin-top: 20px;
+        border-radius: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+}
 section {
   padding: 30px;
   max-width: 900px;
