@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+        body {
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            margin: 0 ;
+            padding: 0;
+            font-family: Figtree;
+            box-sizing: border-box;
+        }
+
+        #judul {
+            position: relative;
+            top: 4rem;
+            text-align: center;
+            margin: auto;
+            line-height: 0.7rem;
+        }
+
+        #wrap_foto_denah {
+            position: relative;
+            top: 4rem;
+            display: flex;
+        }
+
+        #foto_denah {
+            display: block;
+            margin: auto;
+            height: 35rem;
+            width: 25rem;
+        }
+
+        #menu_lantai {
+            position: relative;
+            top: 15rem;
+            margin: auto;
+            background: beige;
+            width: 30rem;
+            height: 4rem;
+        }
+
+        #select_kiri,       
+        #select_kanan {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: white;
+            border: 3px solid black;
+            margin-top: 1.4rem;
+        } 
+        
+        #select_kiri:hover,       
+        #select_kanan:hover {
+            cursor: pointer;
+        } 
+        
+        #bulat_lantai_1,       
+        #bulat_lantai_2,
+        #bulat_lantai_3,       
+        #bulat_lantai_4 {
+            width: 0.9rem;
+            height: 0.9rem;
+            background: grey;
+            border-radius: 10vw;
+            border: none;
+            margin-top: 1.4rem;
+        }        
+
+        #bulat_lantai_1 {
+            background: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="backcode">
+        <p id="code_lantai1">1</p>
+        <p id="code_lantai2">0</p>
+        <p id="code_lantai3">0</p>
+        <p id="code_lantai4">0</p>        
+    </div>
+    
+    <header id="judul"><p><h3><b>DENAH SEKOLAH</b></h3>
+                      <br>SMK Bakti Idhata
+    </p></header>
+
+    <main id="wrap_foto_denah">
+    <img id="foto_denah" src="../img/lantai_1.jpg">
+    <img id="foto_denah" src="../img/lantai_2.jpg">
+    <img id="foto_denah" src="../img/lantai_3.jpg">
+    <img id="foto_denah" src="../img/lantai_4.jpg">
+    </main>
+
+    <nav id="menu_lantai">
+        <button id="select_kiri"><</button>
+        <button id="bulat_lantai_1">
+        <button id="bulat_lantai_2">
+        <button id="bulat_lantai_3">
+        <button id="bulat_lantai_4">
+        <button id="select_kanan">></button>
+    </nav>
+
+    <script src="scriptfc.js"></script>
+
+</body>
+</html>

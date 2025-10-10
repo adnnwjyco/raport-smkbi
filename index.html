@@ -3,144 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Ambil Raport</title>
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-    <link rel="stylesheet" href="styles.css"> 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+    :root {
+        --p1: #fbfdeb;
+        --p2: #556B2F;
+        --p3: #EFF5D2;
+        --p4: #8FA31E;
+    }
 
-        :root {
-            --prim-bg-color: #fbfdeb;
-        }
+    * {
+        box-sizing: border-box;
+        font-family: Figtree;
+        margin: 0;
+        padding: 0;
+    }
 
-        * {
-            font-family: Figtree;
-            margin: 0;
-            padding: 0;
-        }
+    html {
+        height: 100%;
+        font-size: 16px;
+        background-color: var(--p1);
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
 
-        html, body {
-            background-color: var(--prim-bg-color);
-            height: 100%;
-        }
+    main {
+        width: 500px;
+        background-color: var(--p1);
+        min-height: 100vh;
+    }
 
-        html {
-            font-size: 16px;
-        }
+    .background {
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        background: linear-gradient(180deg, transparent, var(--p1)), url('./img/IMG20250731170100.jpg');
+        background-size: cover;
+    }
 
-        main {
-            display: block;
-            margin: auto;
-            width: 600px;
-            height: 100%;
-            padding-bottom: 50px;
-            background-color: var(--prim-bg-color);
-        }
+    nav {
+        position: fixed;
+        bottom: 0;
+        border-radius: 15px 15px 0 0;
+        width: 500px;
+        height: 80px;
+        background-color: var(--p2);
+        color: var(--p1);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+    }
 
-        nav {
-            display: block;
-            margin: auto;
-            width: 600px;
-            position: fixed;
-            bottom: 0;
-        }
+    a {
+        color: var(--p1);
+    }
 
-        h2 {
-            color: #1e1e1e;
-        }
+    .inf1, .inf3, .inf5 {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 500;
+        color: var(--p2);
+    }
 
-        .prog {
-            position: relative;
-            top: 0;
-            width: 100%;
-            height: 3.4px;
-            background-color: #ff5e30;
-        }
+    .inf2, .inf4 {
+        display: block;
+        margin: auto;
+        padding: 10px 0;
+        text-align: center;
+        color: var(--p4);
+        max-width: 300px;
+    }
 
-        .background {
-            position: relative;
-            width: 100%;
-            height: 35vh;
-            background-image: linear-gradient(180deg, transparent, var(--prim-bg-color)), url('./img/dummy.JPG');
-            background-size: cover;
-        }
+    #informasi-lanjutan {
+        min-width: 200px;
+        width: fit-content;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        background-color: #EFF5D2;
+        border-radius: 10px;
+        padding: 10px;
+    }
 
-        .logo-smk {
-            display: block;
-            margin: auto;
-            padding: 10px 20px;
-            border-radius: 0 0 20px 20px;
-            width: 250px;
-            background-color: #fff;
-        }
+    #informasi-lanjutan .lanjutan-w-ic:nth-of-type(2) {
+        border-top: 0.5px solid #556B2F20;
+        border-bottom: 0.5px solid #556B2F20;
+    }
+    
+    .lanjutan-w-ic:nth-of-type(1) {
+        padding-bottom: 0px;
+    }
+    
+    .lanjutan-w-ic:nth-of-type(3) {
+        padding-top: 0px;
+    }
 
-        .main-undangan {
-            width: 100%;
-            display: relative;
-            top: 50px;
-            margin: auto;
-        }
+    .lanjutan-w-ic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--p2);
+        padding: 10px;
+        gap: 10px;
+    }
 
-        .main-undangan h1 {
-            margin-top: 10px;
-            text-align: center;
-            line-height: 40px;
-            color: #8FA31E;
-        }
+    .lanjutan-w-ic h2 {
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
 
-        .main-undangan h2 {
-            margin-top: 15px;
-            line-height: 30px;
-            text-align: center;
-            font-size: 1.3rem;
-            color: #556B2F;
-        }
+    .label-lanjutan {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #556B2F90;
+    }
 
-        #lokasi, #tanggal {
-            margin: 0;
-            font-size: 1.27rem;
-        }
+    .logo-smk {
+        position: rel;
+        display: block;
+        margin: auto;
+        bottom: 0;
+        padding: 10px 20px;
+        border-radius: 0 0 20px 20px;
+        width: 200px;
+        background-color: #fff;
+    }
 
-        .perintah, .perintah2 {
-            font-weight: 500;
-        }
+    .anim {
+        animation: anims-def 1s ease-in-out forwards;
+    }
 
-        .profil-walikelas {
-            padding: 20px   ;
-            background-color: #EFF5D2;
-            border: 1px solid #556b2f75;
-            border-radius: 20px;
-            display: block;
-            margin-top: 35px;
-            margin: 20px;
-            margin-bottom: 20px;
-        }
+    .divider {
+        padding-top: 20px;
+        display: block;
+        margin: auto;
+        width: 80%;
+        border-bottom: 1px solid #1e1e1e25;
+    }
 
-        .profil-walikelas h2 {
-            text-align: center;
-            color: #556B2F;
-            font-size: 1.2rem;
-        }
+#informasi-walikelas {
+    width: 100%;
+    display: flex;  
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;  
+    margin: 30px auto;
+    padding-bottom: 120px;
+}
 
-        .profil-walikelas h3 {
-            text-align: center;
-            font-weight: 500;
-            color: #556B2F;
-            font-size: 1.1rem;
-        }
+    .walikelas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--p3);
+        min-width: 300px;
+        max-width: 300px;
+        padding: 30px;
+        border-radius: 20px;
+    }
 
-        #hubungi {
+    #informasi-walikelas h2 {
+        color: var(--p4);
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #informasi-walikelas h3 {
+        margin-top: 10px;
+        color: var(--p2);
+        font-weight: 500;
+    }
+
+    #informasi-walikelas img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+            object-position: 50% 50%;
+            border-radius: 50%;
+    }
+
+    #hubungi {
+            border: 0;
             margin-top: 20px;
             display: block;
             text-decoration: none;
             width: 100%;
-            color: #fff;
+            color: var(--p3);
             background-color: #556B2F;
             text-align: center;
             padding: 15px 0px;
             border-radius: 10px;
             font-size: 1rem;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             transition: background-color 0.34s ease-in-out;
         }
 
@@ -149,162 +224,260 @@
             background-color: transparent;
             border: 2px solid #556B2F;
         }
-        
-        .informasi {
+
+    .arah {
+        text-decoration: none;
+        color: var(--p3);
+        background-color: var(--p2);
+        display: block;
+        text-align: center;
+        padding: 20px 20px;
+        font-weight: 600;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        max-width: fit-content;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    @keyframes anims-def {
+        0% {
+            transform: translateY(-10px) scale(0.8);
+            opacity: 0%;
+        }
+        100% {
+            transform: translateY(0px) scale(1);
+            opacity: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        main {
+            width: 100vw;
+        }
+
+        nav {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 20px;
-            gap: 15px;
+        }
+    }
+
+    #hubungi:hover,
+    .arah:hover,
+    #tombol_undangan,
+    #tombol_petunjuk,
+    #tombol_syarat,
+    #tombol_tentang_sekolah {
+        cursor: pointer;
+    }
+
+    #tombol_undangan,
+    #tombol_petunjuk,
+    #tombol_syarat,
+    #tombol_tentang_sekolah {
+        width: 2rem;
+        height: 2rem;
+        background-color: transparent;
+    }
+
+    #kelas {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        #informasi-lanjutan {
+            width: 450px;
         }
 
-        .informasi-wic {
-            height: max-content;
-            width: fit-content;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .arah {
+            min-width: 450px;
+            margin-bottom: 10px;
+        }
+
+        .walikelas {
+            min-width: 450px;
+        }
+
+        .lanjutan-w-ic {
             padding: 10px 20px;
-            border-radius: 10px;
-            background-color: #EFF5D2;
+            justify-content: space-between;
+            font-weight: 600;
         }
+    }
 
-        .informasi-wic h2 {
-            font-size: 1.1rem!important;
-        }
 
-        .informasi-wic svg {
-            padding-right: 10px;
-            stroke: #556B2F;
-        }
-
-        #foto_walas {
-            display: block;
-            margin: 0px auto 0px auto;
-            width: 110px;
-            height: 110px;
-            object-fit: cover;
-            object-position: 50% 50%;
-            border-radius: 50%;
-        }
-
-        .kepada-kelas {
-            margin-top: 10px;
-            margin: auto;
-            width: fit-content;
-            display: block;
-            font-size: 2rem;
-        }
-
-        .anim {
-            animation: anims-def 1s ease-in-out forwards;
-        }
-
-        footer p {
-            display: block;
-            margin: auto;
-            text-align: center;
-            font-size: 0.85rem;
-            padding-bottom: 30px;
-            color: #1e1e1e50;
-        }
-
-        .divider {
-            padding-top: 20px;
-            display: block;
-            margin: auto;
-            width: 80%;
-            border-bottom: 1px solid #1e1e1e25;
-        }
-
-        .menu_wrap {
-            position: fixed;
-            bottom: 0;
-            background-color: #ffffff;
-            border-radius: 20px 20px 0px 0px;
-            display: block;
-            margin: auto;
-            box-shadow: 0px 0px 10px black;
-            width: 35.5rem;
-            height: 4rem;
-        }
-
-        @keyframes anims-def {
-            0% {
-                transform: translateY(-10px) scale(0.8);
-                opacity: 0%;
-            }
-            100% {
-                transform: translateY(0px) scale(1);
-                opacity: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            main {
-                margin: 0;
-                width: 100%;
-            }
-
-            .logo-smk {
-                width: 200px;
-            }
-        }
-    </style>
-</head>
+</style>
 <body>
     <main>
-        <section>
-            <!-- <div class="prog"></div> -->
-            <div class="background">
-                <img src="./img/smk-logo.png" class="logo-smk anim">
-                <div class="background-sha"></div>
+        <section class="background">
+            <img src="../img/smk-logo.png" class="logo-smk anim">
+        </section>
+        <section id="informasi-undangan">
+            <h2 class="inf1 anim">Kepada Bapak/Ibu Wali Murid</h2>
+            <h2 id='kelas' class="inf2 anim"></h2>
+            <h2 class="inf3 anim">Kami mengundang anda untuk hadir di acara:</h2>
+            <h1 class="inf4 anim">Pengambilan Raport Peserta Didik</h1>
+            <h2 class="inf3 anim">Yang akan diselenggarakan pada:</h2>
+        </section>
+        <section id="informasi-lanjutan" class="anim">
+            <div class="lanjutan-w-ic anim"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+            <h2>Sabtu, 11 Oktober 2025</h2></div>
+            <div class="lanjutan-w-ic anim"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock10-icon lucide-clock-10"><path d="M12 6v6l-4-2"/><circle cx="12" cy="12" r="10"/></svg>
+            <h2>08:00 WIB s/d 11:00 WIB</h2></div>
+            <div class="lanjutan-w-ic anim"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            <h2 id="lokasi-kelas">Ruang Kelas XI RPL, Lantai 4</h2> </div>
+        </section>
+        <a class="arah anim" href="https://maps.app.goo.gl/UQ18PJiFxs8RPPyXA" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-icon lucide-map"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>
+            Arahkan Saya Menuju Sekolah</a>
+        <div class="divider anim"></div>
+        <section id="informasi-walikelas">
+            <div class="walikelas">
+                <img id="foto-walikelas" src="../img/walas/wahdi-mulyawan.JPG">
+                <h2 id="nama-walikelas">Wahdi Mulyawan, S.Pd.</h2>
+                <h3 id="jabatan-walikelas">Wali Kelas XI RPL</h3>
+                <button id="hubungi"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more-icon lucide-message-circle-more"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+                    Hubungi Walikelas</button>
             </div>
         </section>
-        <section class="main-undangan">
-            <h2 class="anim">Kepada Yth. Bapak/Ibu Wali Murid</h2>
-            <h1 class="kepada-kelas">XI RPL</h1> 
-            <h2 class="perintah">Anda diminta untuk menghadiri acara:</h2>
-            <h1 class="anim">Pengambilan Raport Peserta Didik</h1>
-            <h2 class="anim perintah2">Yang akan dilaksanakan pada:</span></h2>
-            <div class="informasi">
-                <div class="informasi-wic anim">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
-                    <h2 id="tanggal">Sabtu, 11 Oktober 2025</h2>
-                </div>
-                <div class="informasi-wic anim">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock10-icon lucide-clock-10"><path d="M12 6v6l-4-2"/><circle cx="12" cy="12" r="10"/></svg>
-                    <h2 id="tanggal">08:00 WIB s/d 11:00 WIB</h2>
-                </div>
-                <div class="informasi-wic anim">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                    <h2 id="lokasi">Ruang Kelas XI RPL, Lantai 4</h2>
-                </div>
-            </div>
-            <div class="divider anim"></div>
-            <div class="anim profil-walikelas">
-                <img src="./img/walas/stefans-khrisna-bayu.JPG" id="foto_walas">
-                <h2>Stefans Khrisna Bayu, S.I.Kom.</h2>
-                <h3>Walikelas XI RPL</h3>
-                <button id="hubungi">Hubungi Walikelas</button>
-            </div>
-
-            <div class="menu_wrap"></div>
-        </section>
-        
-        <footer><p><br><br><br>Dibuat oleh Tim PKK RPL SMKBI (ADW, NFL, FTR)</p></footer>
-
-        
-
-
-
     </main>
+    <nav>
+        <div class="nav nav1"><svg id="tombol_undangan" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 14h6"/></svg></div>
+        <div class="nav nav2"><a href="./map.html"><svg id="tombol_petunjuk" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></a></div>
+        <div class="nav nav3"><a href="./syarat.html"><svg id="tombol_syarat" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg></a></div>
+        <div class="nav nav4"><a href="./tentang.html"><svg id="tombol_tentang_sekolah" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M18 5v16"/><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6"/><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11"/><path d="M6 5v16"/><circle cx="12" cy="9" r="2"/></svg></a></div>
+    </nav>
+
+
+
+
     
+<script>
+const kelas = [
+    {
+        kode_kelas: '10rpl',
+        nama_kelas: 'X RPL',
+        jurusan_panjang: 'Rekayasa Perangkat Lunak',
+        lantai_kelas: 2,
+        nama_wali_kelas: 'Deni Ramdani, S.Pd.',
+        koordinat_kelas: '-6.283824420141462, 106.79447673620126',
+        foto_profil: 'deni-ramdani.JPG',
+        nomor_telepon: '6287830371123'
+    },
+    {
+        kode_kelas: '10tkj',
+        jurusan_panjang: 'Teknik Komputer dan Jaringan',
+        nama_kelas: 'X TKJ',
+        lantai_kelas: 2,
+        nama_wali_kelas: 'Mochammad Erwinsyah',
+        koordinat_kelas: '-6.28382308709447, 106.7943915760718',
+        foto_profil: 'mochammad-erwinsyah.JPG',
+        nomor_telepon: '6287875070342'
+    },
+    {
+        kode_kelas: '10dkv1',
+        nama_kelas: 'X DKV 1',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 1,
+        nama_wali_kelas: 'Stefans Khrisna Bayu, S.I.Kom.',
+        koordinat_kelas: '-6.283827010173166, 106.79446705433313',
+        foto_profil: 'stefans-khrisna-bayu.JPG',
+        nomor_telepon: '6281386702181'
+    },
+    {
+        kode_kelas: '10dkv2',
+        nama_kelas: 'X DKV 2',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 1,
+        nama_wali_kelas: 'Anisah Meidiana',
+        koordinat_kelas: '-6.283852338066239, 106.79457702490349',
+        foto_profil: 'anisah-meidiana.JPG',
+        nomor_telepon: '6287777145900'
+    },
+    {
+        kode_kelas: '11rpl',
+        nama_kelas: 'XI RPL',
+        jurusan_panjang: 'Rekayasa Perangkat Lunak',
+        lantai_kelas: 4,
+        nama_wali_kelas: 'Siswanto, A.Md.',
+        koordinat_kelas: '-6.283852338066239, 106.79457702490349',
+        foto_profil: 'siswanto.JPG',
+        nomor_telepon: '628561329833'
+    },
+    {
+        kode_kelas: '11tkj',
+        nama_kelas: 'XI TKJ',
+        jurusan_panjang: 'Teknik Komputer dan Jaringan',
+        lantai_kelas: 2,
+        nama_wali_kelas: 'Jihan Fadhilah, S.Kom.',
+        koordinat_kelas: '-6.283875666387306, 106.79461524638101',
+        foto_profil: 'jihan-fadhillah.jpg',
+        nomor_telepon: '6285624426765'
+    },
+    {
+        kode_kelas: '11dkv1',
+        nama_kelas: 'XI DKV 1',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 4,
+        nama_wali_kelas: 'Wahdi Mulyawan, S.Pd.',
+        koordinat_kelas: '-6.28393765306235, 106.79466687890044',
+        foto_profil: 'wahdi-mulyawan.jpg',
+        nomor_telepon: '6281280189755'
+    },
+    {
+        kode_kelas: '11dkv2',
+        nama_kelas: 'XI DKV 2',
+        jurusan_panjang: 'Desain Komunikasi dan Visual',
+        lantai_kelas: 4,
+        nama_wali_kelas: 'Sarah Nur Amalia, S.Pd.',
+        koordinat_kelas: '-6.284006971485903, 106.79467358442245',
+        foto_profil: 'sarah-nur-amalia.jpg',
+        nomor_telepon: '6285773757761'
+    }
+]
+
+const queryWindow = window.location.search;
+const queryParams = new URLSearchParams(queryWindow);
+    
+const nama_kelas = queryParams.get('kode_kelas');
+const cari = kelas.find(k => k.kode_kelas === nama_kelas);
+
+if (cari) {
+    console.log(cari)
+} else {
+    alert('Terdapat kesalahan, tolong periksa kode kelas kembali, ya!')
+}
+
+const namaKelas = document.getElementById('kelas');
+const lokasiKelas = document.getElementById('lokasi-kelas');
+const fotoWalikelas = document.getElementById('foto-walikelas');
+const namaWalikelas = document.getElementById('nama-walikelas');
+const jabatanWalikelas = document.getElementById('jabatan-walikelas')
+
+var hubungi = document.getElementById('hubungi');
+var tombol_gift = document.getElementById('tombol_gift')
+
+namaKelas.innerHTML = `Kelas ${cari.nama_kelas}`;
+lokasiKelas.innerHTML = `Ruang Kelas ${cari.nama_kelas}, Lantai ${cari.lantai_kelas}`;
+fotoWalikelas.src = `./img/walas/${cari.foto_profil}`;
+namaWalikelas.innerHTML = `${cari.nama_wali_kelas}`;
+jabatanWalikelas.innerHTML = `Wali Kelas ${cari.nama_kelas}`;
+
+hubungi.addEventListener('click', function() {
+    window.open(`https://wa.me/${cari.nomor_telepon}`)
+});
+
+
+
+tombol_gift.addEventListener('click', function() {
+    window.open('https://saweria.co/Purosaichi')
+});
+</script> 
+
     
 
-    <script src="scriptfc.js"></script>
-    
+  
 </body>
 </html>
